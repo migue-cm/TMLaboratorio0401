@@ -1,34 +1,49 @@
-package com.example.laboratorio0401;
-import android.os.Bundle;
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.DatePicker;
-import android.widget.TimePicker;
-import android.widget.Toast;
-public class MainActivity extends AppCompatActivity {
-    TimePicker timePicker;
-    DatePicker datePicker;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        timePicker = (TimePicker) findViewById(R.id.timePicker);
-        timePicker.setIs24HourView(true);
-        datePicker = (DatePicker) findViewById(R.id.datePicker);
+package com.example.laboratorio0401
+
+import android.os.Bundle
+import android.view.View
+import android.widget.DatePicker
+import android.widget.TimePicker
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var timePicker: TimePicker
+    private lateinit var datePicker: DatePicker
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_main)
+
+        timePicker = findViewById(R.id.timePicker)
+        timePicker.setIs24HourView(true)
+
+        datePicker = findViewById(R.id.datePicker)
     }
-    public void onClick(View view){
-        Toast.makeText(getBaseContext(),"Hora seleccionada " + timePicker.getCurrentHour() + ":" + timePicker.getCurrentMinute(),
-                Toast.LENGTH_SHORT).show();
+
+    fun onClick(view: View) {
+        val hour = timePicker.hour
+        val minute = timePicker.minute
+
+        Toast.makeText(
+            this,
+            "Hora seleccionada $hour:$minute",
+            Toast.LENGTH_SHORT
+        ).show()
     }
-//    se añadio el metodo onClickFecha para poder mostrar la fecha seleccionada
-    public void onClickFecha(View view) {
-        Toast.makeText(getBaseContext(),"Fecha seleccionada " + datePicker.getDayOfMonth() + "/" + datePicker.getMonth() + "/" + datePicker.getYear(),
-                Toast.LENGTH_SHORT).show();
+
+    // Método para mostrar la fecha seleccionada
+    fun onClickFecha(view: View) {
+        val day = datePicker.dayOfMonth
+        val month = datePicker.month
+        val year = datePicker.year
+
+        Toast.makeText(
+            this,
+            "Fecha seleccionada $day/$month/$year",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
