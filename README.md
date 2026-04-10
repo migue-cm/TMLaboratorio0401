@@ -1,6 +1,6 @@
 # TECNOLOGIAS MOVILES LABORATORIO VISTAS
 
-Laboratorio0401 Vistas
+Laboratorio0401. Vistas. Parte II
 
 # Introduccion
 Este laboratorio trabaja el uso de Pickers, como, datePicker y timePicker, además se añaden dos botones, uno para mostrar la hora que el usuario selecciona y el otro botón para que mediante un Toast nos muetre el dia, mes y año que se busca.
