@@ -19,3 +19,10 @@ Seleccion de hora
 Toast fecha
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/5f780167-db37-4824-86be-b344757a02ab" />
+
+Espacio de trabajo
+
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/8013bf79-9f90-495b-999b-929572b429cf" />
+
+
+
